@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+html, body{
+	font-family: 'Indie Flower', cursive;
+	height: 100%; 
+	padding: 10px; 
+	margin: 0;
+}
+
+div{
+	width: 40%;
+	height: 95%;
+	float: left;
+}
+
+h1, h2, h3{
+	text-align: center;
+}
+
+table{
+	margin-left: 30%;
+	perspective: 800px;
+}
+
+#one { 
+	background-color: rgba(255, 0, 0, 0.3);
+	margin-left: 25%
+	background: #faf0e6;
+	width: 60%;
+	transition: background-color 1000ms ease-in 200ms;
+	border-radius: 15px;
+}
+
+#two {
+	background-color: rgba(255, 0, 0, 0.2);
+	border-radius: 15px;
+	transition: background-color 900ms ease-in;
+}
+
+
+.card{
+	transform-style: preserve-3d;
+  	transition: transform 1s;
+  	position: absolute;
+}
+
+.card:hover{
+	z-index: 2;
+	transform: rotateY(180deg);
+}
+
+#one:hover{
+	background-color: rgba(255, 0, 0, 0.4);
+}
+#two:hover{
+	background-color: rgba(255, 0, 0, 0.4);
+}
+
+.front, .back, .backno {
+	display: block;
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+.front {
+	width: 221px;
+	height: 300px;
+	background-size: cover; 
+ 	background-image: url("./images/card.png");
+}
+
+.back {
+	width: 221px;
+	height: 300px;
+	background-size: cover; 
+	background-image: url('./images/yescard.png');
+	transform: rotateY(180deg);
+  
+}
+
+.backno {
+	width: 221px;
+	height: 300px;
+	background-size: cover; 
+	background-image: url('./images/nocard.png');
+	transform: rotateY(180deg);
+  
+}
+
+.dice {
+	position: fixed;
+	width: 31px;
+	height: 50px;
+	margin-top: 28 %;
+
+	background-image: url('./images/dice.png');
+
+	padding: 10px;
+	animation: spin 2s 1000ms linear normal;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#bow {
+	margin-left: 18%;
+	width: 212px;
+	height: 300px;
+	background-image: url('./images/bow.png');
+}
+
+#bow:hover {
+	animation-name: spin;
+	animation-duration: .3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#bow:active{
+	animation-play-state: paused;
+}
+
+#container{
+	margin-left: 18%;
+	width: 300px;
+	height: 300px;
+	background-image: url('./images/options.png');
+}
+#option1 {}
